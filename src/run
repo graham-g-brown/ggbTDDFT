@@ -1,0 +1,1 @@
+clear && python ./scripts/init.py && nvcc main.cu -arch=sm_30 -llapack -lcusolver -lcufft -lcudart -lcublas -lgsl -lgslcblas -o ggbSPH.o && ./ggbSPH.o && python scripts/analysis.py

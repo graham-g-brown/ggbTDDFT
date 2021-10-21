@@ -1,0 +1,363 @@
+// Simulation Parameters 
+
+#define SIM_DATE (20211007)  
+#define SIM_INDEX (0)  
+
+#define TD_SIMULATION (1)
+#define IN_SITU (1)
+
+// System Settings 
+
+#define CUDA_DEVICE (0)   
+#define MTPB (32)   
+
+#define attosecondAU (4.13413745757510E-02) 
+#define femtosecondAU (4.13413745758000E+01) 
+#define cAU (1.37035999074000E+02) 
+#define intensityAU (3.50900000000000E+16) 
+#define electronVoltAU (2.72114000000000E+01) 
+
+
+// Spatial and Temporal Grid Parameters 
+
+// // Spatial Parameters 
+
+#define N_r (512) 
+#define N_g (513) 
+#define zeta (1.000000000000000E+00) 
+#define R_MAX (1.426363473201893E+02) 
+
+#define R_MASK (9.509089821345951E+01) 
+#define ETA_MASK (1.000000000000000E-03) 
+
+#define N_l (256) 
+#define N_m (3) 
+
+#define Z (5.400000000000000E+01) 
+#define L0 (2) 
+#define targetID (5) 
+#define N_kso (9) 
+
+#define N_t (16384) 
+#define dt (4.134137457575100E-02) 
+
+#define E0 (6.086673303745329E-02) 
+#define omega0 (2.530000000000000E-02) 
+#define omegaX (4.777409468090579E-01) 
+#define tau0 (2.483472453430666E+02) 
+#define CEP0 (1.570796326794897E+00) 
+
+#define PERTURBATION_AMPLITUDE (1.000000000000000E-02) 
+#define dphi (2.454369260617026E-02) 
+#define COS_THETA (9.995500337489875E-01) 
+#define THETA (3.000000000000000E-02) 
+
+#define N_scan (256) 
+
+#define N_har (4) 
+#define USE_HARTREE (1) 
+#define HARTREE_FACTOR (1.00000000000000E+00) 
+#define FUNCTIONAL (1) 
+
+#define WORKING_DATA_MESH_R "./workingData/mesh/r.bin"
+#define WORKING_DATA_MESH_P "./workingData/mesh/P.bin"
+#define WORKING_DATA_MESH_DRDX "./workingData/mesh/drdx.bin"
+#define WORKING_DATA_MESH_E "./workingData/mesh/E.bin"
+#define WORKING_DATA_MESH_TIME "./workingData/mesh/time.bin"
+#define WORKING_DATA_MESH_D1 "./workingData/mesh/D1.bin"
+#define WORKING_DATA_MESH_TD "./workingData/mesh/TD.bin"
+
+#define WORKING_DATA_PROPAGATOR_L_000 "./workingData/hamiltonian/propagators/propagatorL000.bin"
+#define WORKING_DATA_PROPAGATOR_L_001 "./workingData/hamiltonian/propagators/propagatorL001.bin"
+#define WORKING_DATA_PROPAGATOR_L_002 "./workingData/hamiltonian/propagators/propagatorL002.bin"
+#define WORKING_DATA_PROPAGATOR_L_003 "./workingData/hamiltonian/propagators/propagatorL003.bin"
+#define WORKING_DATA_PROPAGATOR_L_004 "./workingData/hamiltonian/propagators/propagatorL004.bin"
+#define WORKING_DATA_PROPAGATOR_L_005 "./workingData/hamiltonian/propagators/propagatorL005.bin"
+#define WORKING_DATA_PROPAGATOR_L_006 "./workingData/hamiltonian/propagators/propagatorL006.bin"
+#define WORKING_DATA_PROPAGATOR_L_007 "./workingData/hamiltonian/propagators/propagatorL007.bin"
+#define WORKING_DATA_PROPAGATOR_L_008 "./workingData/hamiltonian/propagators/propagatorL008.bin"
+#define WORKING_DATA_PROPAGATOR_L_009 "./workingData/hamiltonian/propagators/propagatorL009.bin"
+#define WORKING_DATA_PROPAGATOR_L_010 "./workingData/hamiltonian/propagators/propagatorL010.bin"
+#define WORKING_DATA_PROPAGATOR_L_011 "./workingData/hamiltonian/propagators/propagatorL011.bin"
+#define WORKING_DATA_PROPAGATOR_L_012 "./workingData/hamiltonian/propagators/propagatorL012.bin"
+#define WORKING_DATA_PROPAGATOR_L_013 "./workingData/hamiltonian/propagators/propagatorL013.bin"
+#define WORKING_DATA_PROPAGATOR_L_014 "./workingData/hamiltonian/propagators/propagatorL014.bin"
+#define WORKING_DATA_PROPAGATOR_L_015 "./workingData/hamiltonian/propagators/propagatorL015.bin"
+#define WORKING_DATA_PROPAGATOR_L_016 "./workingData/hamiltonian/propagators/propagatorL016.bin"
+#define WORKING_DATA_PROPAGATOR_L_017 "./workingData/hamiltonian/propagators/propagatorL017.bin"
+#define WORKING_DATA_PROPAGATOR_L_018 "./workingData/hamiltonian/propagators/propagatorL018.bin"
+#define WORKING_DATA_PROPAGATOR_L_019 "./workingData/hamiltonian/propagators/propagatorL019.bin"
+#define WORKING_DATA_PROPAGATOR_L_020 "./workingData/hamiltonian/propagators/propagatorL020.bin"
+#define WORKING_DATA_PROPAGATOR_L_021 "./workingData/hamiltonian/propagators/propagatorL021.bin"
+#define WORKING_DATA_PROPAGATOR_L_022 "./workingData/hamiltonian/propagators/propagatorL022.bin"
+#define WORKING_DATA_PROPAGATOR_L_023 "./workingData/hamiltonian/propagators/propagatorL023.bin"
+#define WORKING_DATA_PROPAGATOR_L_024 "./workingData/hamiltonian/propagators/propagatorL024.bin"
+#define WORKING_DATA_PROPAGATOR_L_025 "./workingData/hamiltonian/propagators/propagatorL025.bin"
+#define WORKING_DATA_PROPAGATOR_L_026 "./workingData/hamiltonian/propagators/propagatorL026.bin"
+#define WORKING_DATA_PROPAGATOR_L_027 "./workingData/hamiltonian/propagators/propagatorL027.bin"
+#define WORKING_DATA_PROPAGATOR_L_028 "./workingData/hamiltonian/propagators/propagatorL028.bin"
+#define WORKING_DATA_PROPAGATOR_L_029 "./workingData/hamiltonian/propagators/propagatorL029.bin"
+#define WORKING_DATA_PROPAGATOR_L_030 "./workingData/hamiltonian/propagators/propagatorL030.bin"
+#define WORKING_DATA_PROPAGATOR_L_031 "./workingData/hamiltonian/propagators/propagatorL031.bin"
+#define WORKING_DATA_PROPAGATOR_L_032 "./workingData/hamiltonian/propagators/propagatorL032.bin"
+#define WORKING_DATA_PROPAGATOR_L_033 "./workingData/hamiltonian/propagators/propagatorL033.bin"
+#define WORKING_DATA_PROPAGATOR_L_034 "./workingData/hamiltonian/propagators/propagatorL034.bin"
+#define WORKING_DATA_PROPAGATOR_L_035 "./workingData/hamiltonian/propagators/propagatorL035.bin"
+#define WORKING_DATA_PROPAGATOR_L_036 "./workingData/hamiltonian/propagators/propagatorL036.bin"
+#define WORKING_DATA_PROPAGATOR_L_037 "./workingData/hamiltonian/propagators/propagatorL037.bin"
+#define WORKING_DATA_PROPAGATOR_L_038 "./workingData/hamiltonian/propagators/propagatorL038.bin"
+#define WORKING_DATA_PROPAGATOR_L_039 "./workingData/hamiltonian/propagators/propagatorL039.bin"
+#define WORKING_DATA_PROPAGATOR_L_040 "./workingData/hamiltonian/propagators/propagatorL040.bin"
+#define WORKING_DATA_PROPAGATOR_L_041 "./workingData/hamiltonian/propagators/propagatorL041.bin"
+#define WORKING_DATA_PROPAGATOR_L_042 "./workingData/hamiltonian/propagators/propagatorL042.bin"
+#define WORKING_DATA_PROPAGATOR_L_043 "./workingData/hamiltonian/propagators/propagatorL043.bin"
+#define WORKING_DATA_PROPAGATOR_L_044 "./workingData/hamiltonian/propagators/propagatorL044.bin"
+#define WORKING_DATA_PROPAGATOR_L_045 "./workingData/hamiltonian/propagators/propagatorL045.bin"
+#define WORKING_DATA_PROPAGATOR_L_046 "./workingData/hamiltonian/propagators/propagatorL046.bin"
+#define WORKING_DATA_PROPAGATOR_L_047 "./workingData/hamiltonian/propagators/propagatorL047.bin"
+#define WORKING_DATA_PROPAGATOR_L_048 "./workingData/hamiltonian/propagators/propagatorL048.bin"
+#define WORKING_DATA_PROPAGATOR_L_049 "./workingData/hamiltonian/propagators/propagatorL049.bin"
+#define WORKING_DATA_PROPAGATOR_L_050 "./workingData/hamiltonian/propagators/propagatorL050.bin"
+#define WORKING_DATA_PROPAGATOR_L_051 "./workingData/hamiltonian/propagators/propagatorL051.bin"
+#define WORKING_DATA_PROPAGATOR_L_052 "./workingData/hamiltonian/propagators/propagatorL052.bin"
+#define WORKING_DATA_PROPAGATOR_L_053 "./workingData/hamiltonian/propagators/propagatorL053.bin"
+#define WORKING_DATA_PROPAGATOR_L_054 "./workingData/hamiltonian/propagators/propagatorL054.bin"
+#define WORKING_DATA_PROPAGATOR_L_055 "./workingData/hamiltonian/propagators/propagatorL055.bin"
+#define WORKING_DATA_PROPAGATOR_L_056 "./workingData/hamiltonian/propagators/propagatorL056.bin"
+#define WORKING_DATA_PROPAGATOR_L_057 "./workingData/hamiltonian/propagators/propagatorL057.bin"
+#define WORKING_DATA_PROPAGATOR_L_058 "./workingData/hamiltonian/propagators/propagatorL058.bin"
+#define WORKING_DATA_PROPAGATOR_L_059 "./workingData/hamiltonian/propagators/propagatorL059.bin"
+#define WORKING_DATA_PROPAGATOR_L_060 "./workingData/hamiltonian/propagators/propagatorL060.bin"
+#define WORKING_DATA_PROPAGATOR_L_061 "./workingData/hamiltonian/propagators/propagatorL061.bin"
+#define WORKING_DATA_PROPAGATOR_L_062 "./workingData/hamiltonian/propagators/propagatorL062.bin"
+#define WORKING_DATA_PROPAGATOR_L_063 "./workingData/hamiltonian/propagators/propagatorL063.bin"
+#define WORKING_DATA_PROPAGATOR_L_064 "./workingData/hamiltonian/propagators/propagatorL064.bin"
+#define WORKING_DATA_PROPAGATOR_L_065 "./workingData/hamiltonian/propagators/propagatorL065.bin"
+#define WORKING_DATA_PROPAGATOR_L_066 "./workingData/hamiltonian/propagators/propagatorL066.bin"
+#define WORKING_DATA_PROPAGATOR_L_067 "./workingData/hamiltonian/propagators/propagatorL067.bin"
+#define WORKING_DATA_PROPAGATOR_L_068 "./workingData/hamiltonian/propagators/propagatorL068.bin"
+#define WORKING_DATA_PROPAGATOR_L_069 "./workingData/hamiltonian/propagators/propagatorL069.bin"
+#define WORKING_DATA_PROPAGATOR_L_070 "./workingData/hamiltonian/propagators/propagatorL070.bin"
+#define WORKING_DATA_PROPAGATOR_L_071 "./workingData/hamiltonian/propagators/propagatorL071.bin"
+#define WORKING_DATA_PROPAGATOR_L_072 "./workingData/hamiltonian/propagators/propagatorL072.bin"
+#define WORKING_DATA_PROPAGATOR_L_073 "./workingData/hamiltonian/propagators/propagatorL073.bin"
+#define WORKING_DATA_PROPAGATOR_L_074 "./workingData/hamiltonian/propagators/propagatorL074.bin"
+#define WORKING_DATA_PROPAGATOR_L_075 "./workingData/hamiltonian/propagators/propagatorL075.bin"
+#define WORKING_DATA_PROPAGATOR_L_076 "./workingData/hamiltonian/propagators/propagatorL076.bin"
+#define WORKING_DATA_PROPAGATOR_L_077 "./workingData/hamiltonian/propagators/propagatorL077.bin"
+#define WORKING_DATA_PROPAGATOR_L_078 "./workingData/hamiltonian/propagators/propagatorL078.bin"
+#define WORKING_DATA_PROPAGATOR_L_079 "./workingData/hamiltonian/propagators/propagatorL079.bin"
+#define WORKING_DATA_PROPAGATOR_L_080 "./workingData/hamiltonian/propagators/propagatorL080.bin"
+#define WORKING_DATA_PROPAGATOR_L_081 "./workingData/hamiltonian/propagators/propagatorL081.bin"
+#define WORKING_DATA_PROPAGATOR_L_082 "./workingData/hamiltonian/propagators/propagatorL082.bin"
+#define WORKING_DATA_PROPAGATOR_L_083 "./workingData/hamiltonian/propagators/propagatorL083.bin"
+#define WORKING_DATA_PROPAGATOR_L_084 "./workingData/hamiltonian/propagators/propagatorL084.bin"
+#define WORKING_DATA_PROPAGATOR_L_085 "./workingData/hamiltonian/propagators/propagatorL085.bin"
+#define WORKING_DATA_PROPAGATOR_L_086 "./workingData/hamiltonian/propagators/propagatorL086.bin"
+#define WORKING_DATA_PROPAGATOR_L_087 "./workingData/hamiltonian/propagators/propagatorL087.bin"
+#define WORKING_DATA_PROPAGATOR_L_088 "./workingData/hamiltonian/propagators/propagatorL088.bin"
+#define WORKING_DATA_PROPAGATOR_L_089 "./workingData/hamiltonian/propagators/propagatorL089.bin"
+#define WORKING_DATA_PROPAGATOR_L_090 "./workingData/hamiltonian/propagators/propagatorL090.bin"
+#define WORKING_DATA_PROPAGATOR_L_091 "./workingData/hamiltonian/propagators/propagatorL091.bin"
+#define WORKING_DATA_PROPAGATOR_L_092 "./workingData/hamiltonian/propagators/propagatorL092.bin"
+#define WORKING_DATA_PROPAGATOR_L_093 "./workingData/hamiltonian/propagators/propagatorL093.bin"
+#define WORKING_DATA_PROPAGATOR_L_094 "./workingData/hamiltonian/propagators/propagatorL094.bin"
+#define WORKING_DATA_PROPAGATOR_L_095 "./workingData/hamiltonian/propagators/propagatorL095.bin"
+#define WORKING_DATA_PROPAGATOR_L_096 "./workingData/hamiltonian/propagators/propagatorL096.bin"
+#define WORKING_DATA_PROPAGATOR_L_097 "./workingData/hamiltonian/propagators/propagatorL097.bin"
+#define WORKING_DATA_PROPAGATOR_L_098 "./workingData/hamiltonian/propagators/propagatorL098.bin"
+#define WORKING_DATA_PROPAGATOR_L_099 "./workingData/hamiltonian/propagators/propagatorL099.bin"
+#define WORKING_DATA_PROPAGATOR_L_100 "./workingData/hamiltonian/propagators/propagatorL100.bin"
+#define WORKING_DATA_PROPAGATOR_L_101 "./workingData/hamiltonian/propagators/propagatorL101.bin"
+#define WORKING_DATA_PROPAGATOR_L_102 "./workingData/hamiltonian/propagators/propagatorL102.bin"
+#define WORKING_DATA_PROPAGATOR_L_103 "./workingData/hamiltonian/propagators/propagatorL103.bin"
+#define WORKING_DATA_PROPAGATOR_L_104 "./workingData/hamiltonian/propagators/propagatorL104.bin"
+#define WORKING_DATA_PROPAGATOR_L_105 "./workingData/hamiltonian/propagators/propagatorL105.bin"
+#define WORKING_DATA_PROPAGATOR_L_106 "./workingData/hamiltonian/propagators/propagatorL106.bin"
+#define WORKING_DATA_PROPAGATOR_L_107 "./workingData/hamiltonian/propagators/propagatorL107.bin"
+#define WORKING_DATA_PROPAGATOR_L_108 "./workingData/hamiltonian/propagators/propagatorL108.bin"
+#define WORKING_DATA_PROPAGATOR_L_109 "./workingData/hamiltonian/propagators/propagatorL109.bin"
+#define WORKING_DATA_PROPAGATOR_L_110 "./workingData/hamiltonian/propagators/propagatorL110.bin"
+#define WORKING_DATA_PROPAGATOR_L_111 "./workingData/hamiltonian/propagators/propagatorL111.bin"
+#define WORKING_DATA_PROPAGATOR_L_112 "./workingData/hamiltonian/propagators/propagatorL112.bin"
+#define WORKING_DATA_PROPAGATOR_L_113 "./workingData/hamiltonian/propagators/propagatorL113.bin"
+#define WORKING_DATA_PROPAGATOR_L_114 "./workingData/hamiltonian/propagators/propagatorL114.bin"
+#define WORKING_DATA_PROPAGATOR_L_115 "./workingData/hamiltonian/propagators/propagatorL115.bin"
+#define WORKING_DATA_PROPAGATOR_L_116 "./workingData/hamiltonian/propagators/propagatorL116.bin"
+#define WORKING_DATA_PROPAGATOR_L_117 "./workingData/hamiltonian/propagators/propagatorL117.bin"
+#define WORKING_DATA_PROPAGATOR_L_118 "./workingData/hamiltonian/propagators/propagatorL118.bin"
+#define WORKING_DATA_PROPAGATOR_L_119 "./workingData/hamiltonian/propagators/propagatorL119.bin"
+#define WORKING_DATA_PROPAGATOR_L_120 "./workingData/hamiltonian/propagators/propagatorL120.bin"
+#define WORKING_DATA_PROPAGATOR_L_121 "./workingData/hamiltonian/propagators/propagatorL121.bin"
+#define WORKING_DATA_PROPAGATOR_L_122 "./workingData/hamiltonian/propagators/propagatorL122.bin"
+#define WORKING_DATA_PROPAGATOR_L_123 "./workingData/hamiltonian/propagators/propagatorL123.bin"
+#define WORKING_DATA_PROPAGATOR_L_124 "./workingData/hamiltonian/propagators/propagatorL124.bin"
+#define WORKING_DATA_PROPAGATOR_L_125 "./workingData/hamiltonian/propagators/propagatorL125.bin"
+#define WORKING_DATA_PROPAGATOR_L_126 "./workingData/hamiltonian/propagators/propagatorL126.bin"
+#define WORKING_DATA_PROPAGATOR_L_127 "./workingData/hamiltonian/propagators/propagatorL127.bin"
+#define WORKING_DATA_PROPAGATOR_L_128 "./workingData/hamiltonian/propagators/propagatorL128.bin"
+#define WORKING_DATA_PROPAGATOR_L_129 "./workingData/hamiltonian/propagators/propagatorL129.bin"
+#define WORKING_DATA_PROPAGATOR_L_130 "./workingData/hamiltonian/propagators/propagatorL130.bin"
+#define WORKING_DATA_PROPAGATOR_L_131 "./workingData/hamiltonian/propagators/propagatorL131.bin"
+#define WORKING_DATA_PROPAGATOR_L_132 "./workingData/hamiltonian/propagators/propagatorL132.bin"
+#define WORKING_DATA_PROPAGATOR_L_133 "./workingData/hamiltonian/propagators/propagatorL133.bin"
+#define WORKING_DATA_PROPAGATOR_L_134 "./workingData/hamiltonian/propagators/propagatorL134.bin"
+#define WORKING_DATA_PROPAGATOR_L_135 "./workingData/hamiltonian/propagators/propagatorL135.bin"
+#define WORKING_DATA_PROPAGATOR_L_136 "./workingData/hamiltonian/propagators/propagatorL136.bin"
+#define WORKING_DATA_PROPAGATOR_L_137 "./workingData/hamiltonian/propagators/propagatorL137.bin"
+#define WORKING_DATA_PROPAGATOR_L_138 "./workingData/hamiltonian/propagators/propagatorL138.bin"
+#define WORKING_DATA_PROPAGATOR_L_139 "./workingData/hamiltonian/propagators/propagatorL139.bin"
+#define WORKING_DATA_PROPAGATOR_L_140 "./workingData/hamiltonian/propagators/propagatorL140.bin"
+#define WORKING_DATA_PROPAGATOR_L_141 "./workingData/hamiltonian/propagators/propagatorL141.bin"
+#define WORKING_DATA_PROPAGATOR_L_142 "./workingData/hamiltonian/propagators/propagatorL142.bin"
+#define WORKING_DATA_PROPAGATOR_L_143 "./workingData/hamiltonian/propagators/propagatorL143.bin"
+#define WORKING_DATA_PROPAGATOR_L_144 "./workingData/hamiltonian/propagators/propagatorL144.bin"
+#define WORKING_DATA_PROPAGATOR_L_145 "./workingData/hamiltonian/propagators/propagatorL145.bin"
+#define WORKING_DATA_PROPAGATOR_L_146 "./workingData/hamiltonian/propagators/propagatorL146.bin"
+#define WORKING_DATA_PROPAGATOR_L_147 "./workingData/hamiltonian/propagators/propagatorL147.bin"
+#define WORKING_DATA_PROPAGATOR_L_148 "./workingData/hamiltonian/propagators/propagatorL148.bin"
+#define WORKING_DATA_PROPAGATOR_L_149 "./workingData/hamiltonian/propagators/propagatorL149.bin"
+#define WORKING_DATA_PROPAGATOR_L_150 "./workingData/hamiltonian/propagators/propagatorL150.bin"
+#define WORKING_DATA_PROPAGATOR_L_151 "./workingData/hamiltonian/propagators/propagatorL151.bin"
+#define WORKING_DATA_PROPAGATOR_L_152 "./workingData/hamiltonian/propagators/propagatorL152.bin"
+#define WORKING_DATA_PROPAGATOR_L_153 "./workingData/hamiltonian/propagators/propagatorL153.bin"
+#define WORKING_DATA_PROPAGATOR_L_154 "./workingData/hamiltonian/propagators/propagatorL154.bin"
+#define WORKING_DATA_PROPAGATOR_L_155 "./workingData/hamiltonian/propagators/propagatorL155.bin"
+#define WORKING_DATA_PROPAGATOR_L_156 "./workingData/hamiltonian/propagators/propagatorL156.bin"
+#define WORKING_DATA_PROPAGATOR_L_157 "./workingData/hamiltonian/propagators/propagatorL157.bin"
+#define WORKING_DATA_PROPAGATOR_L_158 "./workingData/hamiltonian/propagators/propagatorL158.bin"
+#define WORKING_DATA_PROPAGATOR_L_159 "./workingData/hamiltonian/propagators/propagatorL159.bin"
+#define WORKING_DATA_PROPAGATOR_L_160 "./workingData/hamiltonian/propagators/propagatorL160.bin"
+#define WORKING_DATA_PROPAGATOR_L_161 "./workingData/hamiltonian/propagators/propagatorL161.bin"
+#define WORKING_DATA_PROPAGATOR_L_162 "./workingData/hamiltonian/propagators/propagatorL162.bin"
+#define WORKING_DATA_PROPAGATOR_L_163 "./workingData/hamiltonian/propagators/propagatorL163.bin"
+#define WORKING_DATA_PROPAGATOR_L_164 "./workingData/hamiltonian/propagators/propagatorL164.bin"
+#define WORKING_DATA_PROPAGATOR_L_165 "./workingData/hamiltonian/propagators/propagatorL165.bin"
+#define WORKING_DATA_PROPAGATOR_L_166 "./workingData/hamiltonian/propagators/propagatorL166.bin"
+#define WORKING_DATA_PROPAGATOR_L_167 "./workingData/hamiltonian/propagators/propagatorL167.bin"
+#define WORKING_DATA_PROPAGATOR_L_168 "./workingData/hamiltonian/propagators/propagatorL168.bin"
+#define WORKING_DATA_PROPAGATOR_L_169 "./workingData/hamiltonian/propagators/propagatorL169.bin"
+#define WORKING_DATA_PROPAGATOR_L_170 "./workingData/hamiltonian/propagators/propagatorL170.bin"
+#define WORKING_DATA_PROPAGATOR_L_171 "./workingData/hamiltonian/propagators/propagatorL171.bin"
+#define WORKING_DATA_PROPAGATOR_L_172 "./workingData/hamiltonian/propagators/propagatorL172.bin"
+#define WORKING_DATA_PROPAGATOR_L_173 "./workingData/hamiltonian/propagators/propagatorL173.bin"
+#define WORKING_DATA_PROPAGATOR_L_174 "./workingData/hamiltonian/propagators/propagatorL174.bin"
+#define WORKING_DATA_PROPAGATOR_L_175 "./workingData/hamiltonian/propagators/propagatorL175.bin"
+#define WORKING_DATA_PROPAGATOR_L_176 "./workingData/hamiltonian/propagators/propagatorL176.bin"
+#define WORKING_DATA_PROPAGATOR_L_177 "./workingData/hamiltonian/propagators/propagatorL177.bin"
+#define WORKING_DATA_PROPAGATOR_L_178 "./workingData/hamiltonian/propagators/propagatorL178.bin"
+#define WORKING_DATA_PROPAGATOR_L_179 "./workingData/hamiltonian/propagators/propagatorL179.bin"
+#define WORKING_DATA_PROPAGATOR_L_180 "./workingData/hamiltonian/propagators/propagatorL180.bin"
+#define WORKING_DATA_PROPAGATOR_L_181 "./workingData/hamiltonian/propagators/propagatorL181.bin"
+#define WORKING_DATA_PROPAGATOR_L_182 "./workingData/hamiltonian/propagators/propagatorL182.bin"
+#define WORKING_DATA_PROPAGATOR_L_183 "./workingData/hamiltonian/propagators/propagatorL183.bin"
+#define WORKING_DATA_PROPAGATOR_L_184 "./workingData/hamiltonian/propagators/propagatorL184.bin"
+#define WORKING_DATA_PROPAGATOR_L_185 "./workingData/hamiltonian/propagators/propagatorL185.bin"
+#define WORKING_DATA_PROPAGATOR_L_186 "./workingData/hamiltonian/propagators/propagatorL186.bin"
+#define WORKING_DATA_PROPAGATOR_L_187 "./workingData/hamiltonian/propagators/propagatorL187.bin"
+#define WORKING_DATA_PROPAGATOR_L_188 "./workingData/hamiltonian/propagators/propagatorL188.bin"
+#define WORKING_DATA_PROPAGATOR_L_189 "./workingData/hamiltonian/propagators/propagatorL189.bin"
+#define WORKING_DATA_PROPAGATOR_L_190 "./workingData/hamiltonian/propagators/propagatorL190.bin"
+#define WORKING_DATA_PROPAGATOR_L_191 "./workingData/hamiltonian/propagators/propagatorL191.bin"
+#define WORKING_DATA_PROPAGATOR_L_192 "./workingData/hamiltonian/propagators/propagatorL192.bin"
+#define WORKING_DATA_PROPAGATOR_L_193 "./workingData/hamiltonian/propagators/propagatorL193.bin"
+#define WORKING_DATA_PROPAGATOR_L_194 "./workingData/hamiltonian/propagators/propagatorL194.bin"
+#define WORKING_DATA_PROPAGATOR_L_195 "./workingData/hamiltonian/propagators/propagatorL195.bin"
+#define WORKING_DATA_PROPAGATOR_L_196 "./workingData/hamiltonian/propagators/propagatorL196.bin"
+#define WORKING_DATA_PROPAGATOR_L_197 "./workingData/hamiltonian/propagators/propagatorL197.bin"
+#define WORKING_DATA_PROPAGATOR_L_198 "./workingData/hamiltonian/propagators/propagatorL198.bin"
+#define WORKING_DATA_PROPAGATOR_L_199 "./workingData/hamiltonian/propagators/propagatorL199.bin"
+#define WORKING_DATA_PROPAGATOR_L_200 "./workingData/hamiltonian/propagators/propagatorL200.bin"
+#define WORKING_DATA_PROPAGATOR_L_201 "./workingData/hamiltonian/propagators/propagatorL201.bin"
+#define WORKING_DATA_PROPAGATOR_L_202 "./workingData/hamiltonian/propagators/propagatorL202.bin"
+#define WORKING_DATA_PROPAGATOR_L_203 "./workingData/hamiltonian/propagators/propagatorL203.bin"
+#define WORKING_DATA_PROPAGATOR_L_204 "./workingData/hamiltonian/propagators/propagatorL204.bin"
+#define WORKING_DATA_PROPAGATOR_L_205 "./workingData/hamiltonian/propagators/propagatorL205.bin"
+#define WORKING_DATA_PROPAGATOR_L_206 "./workingData/hamiltonian/propagators/propagatorL206.bin"
+#define WORKING_DATA_PROPAGATOR_L_207 "./workingData/hamiltonian/propagators/propagatorL207.bin"
+#define WORKING_DATA_PROPAGATOR_L_208 "./workingData/hamiltonian/propagators/propagatorL208.bin"
+#define WORKING_DATA_PROPAGATOR_L_209 "./workingData/hamiltonian/propagators/propagatorL209.bin"
+#define WORKING_DATA_PROPAGATOR_L_210 "./workingData/hamiltonian/propagators/propagatorL210.bin"
+#define WORKING_DATA_PROPAGATOR_L_211 "./workingData/hamiltonian/propagators/propagatorL211.bin"
+#define WORKING_DATA_PROPAGATOR_L_212 "./workingData/hamiltonian/propagators/propagatorL212.bin"
+#define WORKING_DATA_PROPAGATOR_L_213 "./workingData/hamiltonian/propagators/propagatorL213.bin"
+#define WORKING_DATA_PROPAGATOR_L_214 "./workingData/hamiltonian/propagators/propagatorL214.bin"
+#define WORKING_DATA_PROPAGATOR_L_215 "./workingData/hamiltonian/propagators/propagatorL215.bin"
+#define WORKING_DATA_PROPAGATOR_L_216 "./workingData/hamiltonian/propagators/propagatorL216.bin"
+#define WORKING_DATA_PROPAGATOR_L_217 "./workingData/hamiltonian/propagators/propagatorL217.bin"
+#define WORKING_DATA_PROPAGATOR_L_218 "./workingData/hamiltonian/propagators/propagatorL218.bin"
+#define WORKING_DATA_PROPAGATOR_L_219 "./workingData/hamiltonian/propagators/propagatorL219.bin"
+#define WORKING_DATA_PROPAGATOR_L_220 "./workingData/hamiltonian/propagators/propagatorL220.bin"
+#define WORKING_DATA_PROPAGATOR_L_221 "./workingData/hamiltonian/propagators/propagatorL221.bin"
+#define WORKING_DATA_PROPAGATOR_L_222 "./workingData/hamiltonian/propagators/propagatorL222.bin"
+#define WORKING_DATA_PROPAGATOR_L_223 "./workingData/hamiltonian/propagators/propagatorL223.bin"
+#define WORKING_DATA_PROPAGATOR_L_224 "./workingData/hamiltonian/propagators/propagatorL224.bin"
+#define WORKING_DATA_PROPAGATOR_L_225 "./workingData/hamiltonian/propagators/propagatorL225.bin"
+#define WORKING_DATA_PROPAGATOR_L_226 "./workingData/hamiltonian/propagators/propagatorL226.bin"
+#define WORKING_DATA_PROPAGATOR_L_227 "./workingData/hamiltonian/propagators/propagatorL227.bin"
+#define WORKING_DATA_PROPAGATOR_L_228 "./workingData/hamiltonian/propagators/propagatorL228.bin"
+#define WORKING_DATA_PROPAGATOR_L_229 "./workingData/hamiltonian/propagators/propagatorL229.bin"
+#define WORKING_DATA_PROPAGATOR_L_230 "./workingData/hamiltonian/propagators/propagatorL230.bin"
+#define WORKING_DATA_PROPAGATOR_L_231 "./workingData/hamiltonian/propagators/propagatorL231.bin"
+#define WORKING_DATA_PROPAGATOR_L_232 "./workingData/hamiltonian/propagators/propagatorL232.bin"
+#define WORKING_DATA_PROPAGATOR_L_233 "./workingData/hamiltonian/propagators/propagatorL233.bin"
+#define WORKING_DATA_PROPAGATOR_L_234 "./workingData/hamiltonian/propagators/propagatorL234.bin"
+#define WORKING_DATA_PROPAGATOR_L_235 "./workingData/hamiltonian/propagators/propagatorL235.bin"
+#define WORKING_DATA_PROPAGATOR_L_236 "./workingData/hamiltonian/propagators/propagatorL236.bin"
+#define WORKING_DATA_PROPAGATOR_L_237 "./workingData/hamiltonian/propagators/propagatorL237.bin"
+#define WORKING_DATA_PROPAGATOR_L_238 "./workingData/hamiltonian/propagators/propagatorL238.bin"
+#define WORKING_DATA_PROPAGATOR_L_239 "./workingData/hamiltonian/propagators/propagatorL239.bin"
+#define WORKING_DATA_PROPAGATOR_L_240 "./workingData/hamiltonian/propagators/propagatorL240.bin"
+#define WORKING_DATA_PROPAGATOR_L_241 "./workingData/hamiltonian/propagators/propagatorL241.bin"
+#define WORKING_DATA_PROPAGATOR_L_242 "./workingData/hamiltonian/propagators/propagatorL242.bin"
+#define WORKING_DATA_PROPAGATOR_L_243 "./workingData/hamiltonian/propagators/propagatorL243.bin"
+#define WORKING_DATA_PROPAGATOR_L_244 "./workingData/hamiltonian/propagators/propagatorL244.bin"
+#define WORKING_DATA_PROPAGATOR_L_245 "./workingData/hamiltonian/propagators/propagatorL245.bin"
+#define WORKING_DATA_PROPAGATOR_L_246 "./workingData/hamiltonian/propagators/propagatorL246.bin"
+#define WORKING_DATA_PROPAGATOR_L_247 "./workingData/hamiltonian/propagators/propagatorL247.bin"
+#define WORKING_DATA_PROPAGATOR_L_248 "./workingData/hamiltonian/propagators/propagatorL248.bin"
+#define WORKING_DATA_PROPAGATOR_L_249 "./workingData/hamiltonian/propagators/propagatorL249.bin"
+#define WORKING_DATA_PROPAGATOR_L_250 "./workingData/hamiltonian/propagators/propagatorL250.bin"
+#define WORKING_DATA_PROPAGATOR_L_251 "./workingData/hamiltonian/propagators/propagatorL251.bin"
+#define WORKING_DATA_PROPAGATOR_L_252 "./workingData/hamiltonian/propagators/propagatorL252.bin"
+#define WORKING_DATA_PROPAGATOR_L_253 "./workingData/hamiltonian/propagators/propagatorL253.bin"
+#define WORKING_DATA_PROPAGATOR_L_254 "./workingData/hamiltonian/propagators/propagatorL254.bin"
+#define WORKING_DATA_PROPAGATOR_L_255 "./workingData/hamiltonian/propagators/propagatorL255.bin"
+
+#define LOCAL_OUTPUT_MESH_R "../output/20211007/00000/static/mesh/r.bin"
+#define LOCAL_OUTPUT_MESH_DRDX "../output/20211007/00000/static/mesh/drdx.bin"
+#define LOCAL_OUTPUT_MESH_TIME "../output/20211007/00000/static/mesh/time.bin"
+#define LOCAL_OUTPUT_MESH_E "../output/20211007/00000/timeDependent/field/E.bin"
+#define LOCAL_OUTPUT_VHAR_VHAR "../output/20211007/00000/timeDependent/observables/vhar/vhar.bin"
+#define LOCAL_OUTPUT_VHAR_VHAR0 "../output/20211007/00000/timeDependent/observables/vhar/vhar0.bin"
+#define LOCAL_OUTPUT_VEXC_VEXC "../output/20211007/00000/timeDependent/observables/vexc/vexc.bin"
+#define LOCAL_OUTPUT_VEXC_VEXC0 "../output/20211007/00000/timeDependent/observables/vexc/vexc0.bin"
+
+// Load Library Files 
+
+#include "./subFunctions/system/h_checkCUDADevice.cuh"
+
+#include "./subFunctions/output/h_writeMesh.cuh"
+#include "./subFunctions/output/h_writeDipoleMoment.cuh"
+#include "./subFunctions/output/h_writeHartreePotential.cuh"
+#include "./subFunctions/output/h_writeExchangePotential.cuh"
+
+#include "./subFunctions/mesh/h_initialiseMesh.cuh"
+
+#include "./subFunctions/field/h_initialiseField.cuh"
+#include "./subFunctions/field/h_resetField.cuh"
+
+#include "./subFunctions/potentials/hartree/angularCoefficients.cuh"
+#include "./subFunctions/potentials/hartree/hartreePotentialDensity.cuh"
+#include "./subFunctions/potentials/hartree/h_calculateHartreePotential.cuh"
+#include "./subFunctions/potentials/exchangeCorrelation/h_calculateExchangeCorrelationPotential.cuh"
+
+#include "./subFunctions/timePropagation/h_initialisePropagators.cuh"
+#include "./subFunctions/timePropagation/h_initialiseTDKSOSet.cuh"
+#include "./subFunctions/timePropagation/observables/dipoleMoment.cuh"
+#include "./subFunctions/timePropagation/observables/dipoleAcceleration.cuh"
+#include "./subFunctions/timePropagation/externalFieldCoupling/lengthGauge/couplingS.cuh"
+#include "./subFunctions/timePropagation/externalFieldCoupling/lengthGauge/couplingP.cuh"
+#include "./subFunctions/timePropagation/externalFieldCoupling/lengthGauge/couplingD.cuh"
+#include "./subFunctions/timePropagation/externalFieldCoupling/lengthGauge/couplingF.cuh"
+#include "./subFunctions/timePropagation/h_timePropagation.cuh"
