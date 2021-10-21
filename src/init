@@ -1,0 +1,52 @@
+# Define simulation parameters here
+# Use Python syntax
+
+# Simulation Settings
+
+TD_SIMULATION = 1
+IN_SITU       = 1
+FROM_SCRATCH  = 1
+
+N_scan = 256
+
+# Target System
+
+atom = Xe
+USE_MULLER = 0
+
+# Radial Grid
+
+N_r  = 512
+zeta = 1.0
+
+# Number of Angular Momenta in Continuum
+
+N_l = 256
+
+# Temporal Grid
+
+N_t = 16384
+dt  = 1.0
+
+# External Field Settings
+
+I0 		= 1.3E14
+
+omega0	= 0.0253
+tau0 	= 2.0 * np.pi / 0.0253 / 41.3413745758
+CEP0 	= 0.5 * np.pi
+
+# Multielectron Interaction Level
+
+USE_HARTREE = 1
+N_har 		  = 4
+
+# Propagator Method
+
+EXP_METHOD = CN
+
+ABC_R_SCALE = 1.0
+
+# Generate Figures of Ground State Kohn-Sham System
+
+GS_FIGS = True
