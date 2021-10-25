@@ -2,19 +2,6 @@ This program computes time-dependent strong-field dynamics in spherically
 symmetric systems for linearly polarized fields using the formalism of
 real-time time-dependent density functional theory.
 
-Using this is easy!
-
-You must first SSH into the CUDA server. To do this, open a terminal and
-execute the following:
-
-ssh graham@10.132.193.153
-
-You will be prompted for a password, which is as follows:
-
-bcd55c
-
-Once you have logged into the server, type ggbSPH, which is a shortcut to the program directory.
-
 The settings of the program can all be set in the "init" file. There are many possible variables
 and parameters in the program. Default values are set for parameters not explicitly declared. The
 default settings correspond to simulating HHG in hydrogen driven by a 20 fs 800 nm field of intensity
